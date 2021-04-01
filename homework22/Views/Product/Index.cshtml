@@ -1,0 +1,18 @@
+﻿@model List<Product>
+@{
+    ViewData["Title"] = "Products list";
+}
+
+<a href="~/Product/Create" class="btn btn-success">Add mew</a>
+
+<div class="row d-block">
+    @foreach (var product in Model)
+    {
+        <div class="border bg-light" style="padding: 8px; margin: 8px">
+            <div>Name: @product.Name | Цена: @product.Price TJS</div>
+            <div>Category: <a href="~/Product/Index?category=@product.Category.Name">@product.Category.Name</a></div>
+            <a href="~/Product/Edit?id=@product.Id" class="btn btn-warning">Edit</a>
+            <a href="~/Product/Delete?id=@product.Id" class="btn btn-danger">Delete</a>
+        </div>
+    }
+</div>

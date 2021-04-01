@@ -1,0 +1,12 @@
+﻿@model homework22.ViewModels.CategoryViewModel
+
+@{
+    ViewData["Title"] = "Edit category";
+}
+
+<form action="Edit" method="post">
+    <input type="hidden" asp asp-for="Id">
+    <input class="form-control" placeholder="Category name" asp-for="Name" required/>
+    <br>
+    <input type="submit" class="btn btn-success" value="Edit"/>
+</form>

@@ -1,0 +1,12 @@
+﻿@model homework22.ViewModels.CategoryViewModel
+
+@{
+    ViewData["Title"] = "Create new category";
+}
+
+<form action="Create" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <input class="form-control" placeholder="Category name" asp-for="Name" required/>
+    <br>
+    <input type="submit" class="btn btn-success" value="Add"/>
+</form>

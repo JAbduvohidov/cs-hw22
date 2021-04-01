@@ -1,0 +1,17 @@
+﻿@model List<Category>
+@{
+    ViewData["Title"] = "Categories list";
+}
+
+<a href="~/Category/Create" class="btn btn-success">Create new category</a>
+
+<div class="row d-block">
+    @foreach (var category in Model)
+    {
+        <div class="border bg-light" style="padding: 8px; margin: 8px">
+            <div>Name: <a href="~/Product/Index?category=@category.Name">@category.Name</a></div>
+            <a href="~/Category/Edit?id=@category.Id" class="btn btn-warning">Edit</a>
+            <a href="~/Category/Delete?id=@category.Id" class="btn btn-danger">Delete</a>
+        </div>
+    }
+</div>

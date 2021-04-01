@@ -1,0 +1,13 @@
+﻿@model homework22.ViewModels.ProductViewModel
+
+@{
+    ViewData["Title"] = "Edit product";
+}
+
+<form action="Edit" method="post">
+    <input class="form-control" asp-for="Name" required/>
+    <input class="form-control" asp-for="Price" required/>
+    <select class="form-control" asp-for="CategoryId" asp-items="@Model.Categories"></select>
+    <br>
+    <input type="submit" class="btn btn-success" value="Edit"/>
+</form>
